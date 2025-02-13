@@ -21,6 +21,13 @@ const userSchema = new Schema({
         unique:true,
         trim: true, 
     },
+    password:{
+        type:String,
+        required: true,
+    },
+    refreshToken:{
+        type:String,
+    },
 },{timestamps:true})
 
 userSchema.pre("save", async function(next){
